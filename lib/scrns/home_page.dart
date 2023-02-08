@@ -1,4 +1,3 @@
-import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:tick_tick_task/models/task_model.dart';
 
@@ -10,7 +9,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -198,7 +196,7 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.only(left: 10),
                           margin: const EdgeInsets.only(left: 10),
                           height: 120,
-                          width: 220,
+                          width: 200,
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -219,8 +217,8 @@ class _HomePageState extends State<HomePage> {
                                   Text(
                                     'Online Class Routine',
                                     style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text('Save Date: 10/12/2022'),
@@ -231,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         SizedBox(
                           height: 120,
-                          width: 220,
+                          width: 200,
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -252,8 +250,8 @@ class _HomePageState extends State<HomePage> {
                                   Text(
                                     'Office Work List',
                                     style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text('Save Date: 10/12/2022'),
@@ -264,7 +262,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         SizedBox(
                           height: 120,
-                          width: 220,
+                          width: 200,
                           child: Card(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18.0),
@@ -285,8 +283,8 @@ class _HomePageState extends State<HomePage> {
                                   Text(
                                     'Day Task',
                                     style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   Text('Save Date: 10/12/2022'),
@@ -350,21 +348,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-        ],
-      ),
-      bottomNavigationBar: FloatingNavbar(
-        selectedItemColor: Colors.green,
-        backgroundColor: Colors.white,
-        unselectedItemColor: const Color.fromARGB(59, 113, 113, 113),
-        onTap: (int val) => setState(() => _index = val),
-        currentIndex: _index,
-        items: [
-          FloatingNavbarItem(icon: Icons.home, title: 'Home'),
-          FloatingNavbarItem(icon: Icons.search, title: 'Search'),
-          FloatingNavbarItem(
-              icon: Icons.emergency_recording_rounded, title: 'Record'),
-          FloatingNavbarItem(icon: Icons.save_alt_rounded, title: 'Save'),
-          FloatingNavbarItem(icon: Icons.settings, title: 'Settings'),
         ],
       ),
     );
